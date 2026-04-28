@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <main class="app">
+    <section class="screen active" id="passwordScreen">
+      <h1 class="title">A Little Birthday Surprise</h1>
+      <p class="subtitle">Enter the password first, then the game starts, and after that you can open the envelope.😘</p>
+
+      <div class="password-box">
+        <div class="pin-display" id="pinDisplay" aria-label="Entered code">
+          <span class="pin-slot" data-pin-slot></span>
+          <span class="pin-slot" data-pin-slot></span>
+          <span class="pin-slot" data-pin-slot></span>
+          <span class="pin-slot" data-pin-slot></span>
+          <span class="pin-slot" data-pin-slot></span>
+          <span class="pin-slot" data-pin-slot></span>
+        </div>
+        <p class="pin-hint-text">Hint:Our Anniversary</p>
+        <div class="keypad" aria-label="Numeric keypad">
+          <button class="keypad-key" type="button" data-digit="1">1</button>
+          <button class="keypad-key" type="button" data-digit="2">2</button>
+          <button class="keypad-key" type="button" data-digit="3">3</button>
+          <button class="keypad-key" type="button" data-digit="4">4</button>
+          <button class="keypad-key" type="button" data-digit="5">5</button>
+          <button class="keypad-key" type="button" data-digit="6">6</button>
+          <button class="keypad-key" type="button" data-digit="7">7</button>
+          <button class="keypad-key" type="button" data-digit="8">8</button>
+          <button class="keypad-key" type="button" data-digit="9">9</button>
+          <button class="keypad-key keypad-action" id="clearButton" type="button">Clear</button>
+          <button class="keypad-key" type="button" data-digit="0">0</button>
+          <button class="keypad-key keypad-action" id="deleteButton" type="button">Delete</button>
+        </div>
+        <div class="hint" id="passwordHint"></div>
+      </div>
+    </section>
+
+    <section class="screen" id="gameScreen">
+      <h1 class="title">Catch 5 Hearts</h1>
+      <p class="subtitle">Tap all 5 hearts to unlock the envelope.</p>
+      <div class="score" id="scoreText">Hearts caught: 0 / 5</div>
+      <div class="game-board" id="gameBoard"></div>
+      <div class="status" id="gameStatus"></div>
+    </section>
+
+    <section class="screen" id="envelopeScreen">
+      <h1 class="title">One More Click</h1>
+      <p class="envelope-note">The letter is inside the envelope now. Click the envelope to pull the paper out.</p>
+      <div class="toolbar">
+        <button class="music-button" id="musicButton" type="button">Play Music</button>
+      </div>
+
+      <div class="envelope-stage">
+        <div class="envelope-wrap" id="envelopeWrap" role="button" aria-label="Open envelope">
+          <div class="letter-paper">
+            <p class="paper-kicker">To My Baba</p>
+            <h2>Happy Birthday</h2>
+            <p>
+             Baba, Happy Happy Birthday. You make my world softer, brighter, and more beautiful.
+              I hope today brings you the same warmth and joy that you give to everyone around you.
+            </p>
+            <p>
+              You are the most amazing person I know, and I am so grateful to have you in my life. Your kindness,
+              strength, and love inspire me every day. I hope this year brings you as much happiness as you have
+              given to me. Thank you for being patient with me.</p>
+              <p>
+                I know i've made mistakes in the past, and I know I have a lot of things to work on, but I want you to know that I am committed to growing and improving myself for you.I want you to know that you mean everything to me. 
+                Thank you for your patience and understanding, and for loving me unconditionally. Also, i want to say sorry if this is what i can give you right now, but i promise to make it up to you in the future.
+                Even though we always fight and argue, or sometimes we don't talk for days, I hope that we still choose to love each other and be there for each other no matter what. I know we have our ups and downs, but I want you to know that I will always be here for you, through thick and thin. I hope we can continue to grow together and create many more beautiful memories in the years to come.
+                I admit it, I can't even tell this to you in person and this is just a small surprise and i know that my words isn't enough but, I wish that this little surprise brings a smile to your face and reminds you of how much you are loved, not just today but every day.
+            </p>
+            <p>
+              Thank you for being you. I love you so much.
+            </p>
+            <p>
+              I made this little surprise just for you, and I hope every part of it reminds you how deeply
+              loved you are. May this year bring you peace, laughter, answered prayers, sweet memories,
+              and all the little moments that make life feel magical.
+            </p>
+            <p>
+              No matter where life takes us, you will always have a special place in my heart.
+            </p>
+            <p class="signature">With all my love, always.</p>
+            <button class="surprise-button" id="surpriseButton" type="button">One More Surprise</button>
+            <div class="surprise-note" id="surpriseNote">
+              <p>
+               My favorite part of this little page is that it leads to you. Happy birthday, beautiful. If I could, 
+               I'd wrap every moment of your day in warmth and hold you close so you never forget how deeply you're loved. 
+               You're not just someone special to me—you're my favorite feeling, my quiet peace, and the person my heart keeps choosing in every way it can. 
+               I hope this year brings you closer to everything you've been wishing for, and I hope I get to be there beside you through it all.
+              </p>
+            </div>
+          </div>
+
+          <div class="envelope-shell">
+            <div class="envelope">
+              <div class="envelope-back"></div>
+              <div class="envelope-front"></div>
+              <div class="envelope-flap"></div>
+              <div class="seal"><span class="envelope-heart">&#10084;</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="final-message" id="finalMessage">Click the envelope.</p>
+   
+    </section>
+  </main>
+
+  <audio id="music" loop preload="auto" autoplay volume="0.1">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
