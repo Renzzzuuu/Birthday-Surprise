@@ -1,6 +1,4 @@
-html {
-  font-size: clamp(14px, 2.2vw, 18px);
-}
+
 
 :root {
   --bg-1: #d8f3dc;
@@ -13,8 +11,17 @@ html {
   --shadow: 0 18px 45px rgba(45, 106, 79, 0.18);
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: clamp(14px, 2.2vw, 18px);
 }
 
 body {
@@ -23,6 +30,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   font-family: "Georgia", serif;
+  -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
   color: var(--text);
   background:
@@ -64,10 +72,12 @@ body {
 
 .app {
   position: relative;
+  min-height: 100vh;
   min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 16px;
   z-index: 1;
 }
