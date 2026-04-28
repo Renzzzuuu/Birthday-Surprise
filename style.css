@@ -1,3 +1,7 @@
+html {
+  font-size: clamp(14px, 2.2vw, 18px);
+}
+
 :root {
   --bg-1: #d8f3dc;
   --bg-2: #c7f9cc;
@@ -60,17 +64,19 @@ body {
 
 .app {
   position: relative;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 24px;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
   z-index: 1;
 }
 
 .screen {
   display: none;
-  width: min(92vw, 760px);
+  width: 100%;
   max-width: 760px;
+  margin: auto;
   background: var(--card);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -625,12 +631,8 @@ button:hover {
   }
 
   .letter-paper {
-    min-height: 210px;
-    padding: 22px 14px 18px;
-  }
-
-    .letter-paper {
   width: 92vw;
+  min-height: 210px;
   padding: 18px 12px;
 }
 
