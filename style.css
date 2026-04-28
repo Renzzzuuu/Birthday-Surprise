@@ -183,6 +183,10 @@ button {
   touch-action: manipulation;
 }
 
+button:active {
+  transform: scale(0.97);
+}
+
 button:hover {
   filter: brightness(1.03);
 }
@@ -197,7 +201,7 @@ button:hover {
 .game-board {
   position: relative;
   width: min(92vw, 680px);
-  height: min(68vh, 440px);
+    height: clamp(300px, 60vh, 440px);
   margin: 20px auto 0;
   border-radius: 22px;
   overflow: hidden;
@@ -625,13 +629,18 @@ button:hover {
     padding: 22px 14px 18px;
   }
 
+    .letter-paper {
+  width: 92vw;
+  padding: 18px 12px;
+}
+
   .paper-kicker {
     font-size: 0.75rem;
   }
 
   .letter-paper p {
-    font-size: 0.9rem;
-  }
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
 
   .pin-display {
     grid-template-columns: repeat(6, minmax(34px, 44px));
@@ -648,6 +657,7 @@ button:hover {
   }
 
   .keypad-key {
-    min-height: 52px;
-  }
+  min-height: 64px;
+  font-size: 1.2rem;
+}
 }
