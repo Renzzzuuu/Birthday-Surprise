@@ -101,8 +101,10 @@ function spawnHeart() {
   heart.className = "tap-heart";
   heart.textContent = "❤";
 
-  const maxX = Math.max(gameBoard.clientWidth - 60, 20);
-  const maxY = Math.max(gameBoard.clientHeight - 60, 20);
+  const heartSize = heart.offsetWidth || 60;
+
+const maxX = Math.max(gameBoard.clientWidth - heartSize, 20);
+const maxY = Math.max(gameBoard.clientHeight - heartSize, 20);
 
   heart.style.left = Math.random() * maxX + "px";
   heart.style.top = Math.random() * maxY + "px";
